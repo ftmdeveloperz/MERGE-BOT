@@ -62,9 +62,6 @@ class MergeBot(Client):
         super().stop()
         return LOGGER.info("Bot Stopped")
 
-# Get the port from the environment variable or set a default port
-PORT = int(os.getenv("PORT", 8080))
-
 mergeApp = MergeBot(
     name="merge-bot",
     api_hash=Config.API_HASH,
@@ -733,7 +730,10 @@ except KeyError:
     userBot = None
     LOGGER.warning("No User Session, Default Bot session will be used")
 
-
+# Use the PORT environment variable or default to 8000
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+	
 if __name__ == "__main__":
     # with mergeApp:
     #     bot:User = mergeApp.get_me()
@@ -751,5 +751,4 @@ if __name__ == "__main__":
         LOGGER.error(f"{err}")
         Config.IS_PREMIUM = True
         pass
-
     mergeApp.run()
