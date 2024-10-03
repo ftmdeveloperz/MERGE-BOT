@@ -45,7 +45,6 @@ from __init__ import (
 from config import Config
 from helpers import database
 from helpers.utils import UserSettings, get_readable_file_size, get_readable_time
-
 botStartTime = time.time()
 parent_id = Config.GDRIVE_FOLDER_ID
 
@@ -750,7 +749,7 @@ if __name__ == "__main__":
             Config.IS_PREMIUM = user.is_premium
     except Exception as err:
         LOGGER.error(f"{err}")
-        Config.IS_PREMIUM = False
+        Config.IS_PREMIUM = True
         pass
 
     mergeApp.run()
