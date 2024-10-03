@@ -63,6 +63,8 @@ class MergeBot(Client):
         super().stop()
         return LOGGER.info("Bot Stopped")
 
+# Get the port from the environment variable or set a default port
+PORT = int(os.getenv("PORT", 8080))
 
 mergeApp = MergeBot(
     name="merge-bot",
@@ -71,7 +73,7 @@ mergeApp = MergeBot(
     bot_token=Config.BOT_TOKEN,
     workers=300,
     plugins=dict(root="plugins"),
-    app_version="5.0+yash-mergebot",
+    app_version="5.0",
 )
 
 
