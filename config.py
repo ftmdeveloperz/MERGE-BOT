@@ -2,10 +2,10 @@ import os
 
 
 class Config(object):
-    API_HASH = os.environ.get("API_HASH", "b3a786dce1f4e7d56674b7cadfde3c9d")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8022217287:AAFawvEt5-R1igQx8bdOkMntWmmfR2NgjdU")
-    TELEGRAM_API = os.environ.get("TELEGRAM_API", "28776072")
-    OWNER = os.environ.get("OWNER", "7711039923")
+    API_HASH = os.environ.get("API_HASH", "0c8f8bd171e05e42d6f6e5a6f4305389")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8079681536:AAFpemVErQXcyQ5QFt3mPVph0tYlXAHIXoI")
+    TELEGRAM_API = os.environ.get("TELEGRAM_API", "22141398")
+    OWNER = os.environ.get("OWNER", "8122637721")
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "ftmdeveloper")
     PASSWORD = os.environ.get("PASSWORD", "@ftmbotz")
     DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://ftm:ftm@cluster0.vj4gc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
